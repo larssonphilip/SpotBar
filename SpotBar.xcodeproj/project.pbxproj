@@ -14,6 +14,7 @@
 		D281C7D12AD87A69009ED17B /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D281C7D02AD87A69009ED17B /* MusicPlayer.swift */; };
 		D281C7D32AD87A76009ED17B /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D281C7D22AD87A76009ED17B /* AppMenu.swift */; };
 		D281C7D52AD87A8E009ED17B /* SongInfoImageOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D281C7D42AD87A8E009ED17B /* SongInfoImageOverlay.swift */; };
+		D2A1FDC12AE9AD4B007B5691 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1FDC02AE9AD4B007B5691 /* RequestHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D281C7D02AD87A69009ED17B /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		D281C7D22AD87A76009ED17B /* AppMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenu.swift; sourceTree = "<group>"; };
 		D281C7D42AD87A8E009ED17B /* SongInfoImageOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongInfoImageOverlay.swift; sourceTree = "<group>"; };
+		D2A1FDC02AE9AD4B007B5691 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				D281C7CA2AD879FB009ED17B /* SpotBar.entitlements */,
 				D281C7C72AD879FB009ED17B /* Preview Content */,
 				D281C7D42AD87A8E009ED17B /* SongInfoImageOverlay.swift */,
+				D2A1FDC02AE9AD4B007B5691 /* RequestHandler.swift */,
 			);
 			path = SpotBar;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 			files = (
 				D281C7C42AD879FA009ED17B /* ContentView.swift in Sources */,
 				D281C7D52AD87A8E009ED17B /* SongInfoImageOverlay.swift in Sources */,
+				D2A1FDC12AE9AD4B007B5691 /* RequestHandler.swift in Sources */,
 				D281C7C22AD879FA009ED17B /* SpotBarApp.swift in Sources */,
 				D281C7D32AD87A76009ED17B /* AppMenu.swift in Sources */,
 				D281C7D12AD87A69009ED17B /* MusicPlayer.swift in Sources */,
