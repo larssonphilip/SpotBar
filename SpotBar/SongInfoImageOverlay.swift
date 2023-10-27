@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct SongInfoImageOverlay: View {
+    @State private var artistAndSongText: String = "Placeholder Artist - Placeholder Song Title"
     var body: some View {
         ZStack {
-            Text("Placeholder Artist - Placeholder Song Title")
+            Text(artistAndSongText)
+                .tag(1)
                 .font(.callout)
                 .padding(6)
                 .foregroundColor(.white)
@@ -18,5 +20,9 @@ struct SongInfoImageOverlay: View {
         .opacity(0.8)
         .cornerRadius(10.0)
         .padding(.leading, 6)
+    }
+    
+    func updateSongTitle(artist: String, songTitle: String) {
+        artistAndSongText = "\(artist) - \(songTitle)"
     }
 }
