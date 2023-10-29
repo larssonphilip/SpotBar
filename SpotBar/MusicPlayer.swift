@@ -9,9 +9,9 @@ import SwiftUI
 
 struct MusicPlayer: View {
     @State private var progress = 0.0
-    
+    let requestHandler = RequestHandler()
     func playMusic() {
-        
+        requestHandler.fetchAccessToken(clientId: "", clientSecret: "")
     }
     
     func pauseMusic() {
@@ -64,6 +64,9 @@ struct MusicPlayer: View {
                     .buttonStyle(PlainButtonStyle())
             }.frame(minHeight: 75.0)
             
-        }.background(Color(red: 18/255, green: 18/255, blue: 18/255))
+        }.onAppear()
+            .background(Color(red: 18/255, green: 18/255, blue: 18/255))
+            
+
     }
 }

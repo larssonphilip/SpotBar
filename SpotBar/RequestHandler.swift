@@ -12,36 +12,44 @@ struct RequestHandler {
     @State private var accessTokenType: String = ""
     @State var currentlyPlaying: String? = nil
     @State var isPlaying: Bool = false
-    func fetchAccessToken(clientId: String, clientSecret: String) {
-        let grantTypeStr = "grant_type=client_credentials&client_id=\(clientId)&client_secret=\(clientSecret)"
+    
+    public func fetchAccessToken(clientId: String, clientSecret: String) {
+        let stringToEncode = "\(clientId):\(clientSecret)"
+        var authCode = ""
+        
+        if let data = stringToEncode.data(using: .utf8) {
+            authCode = data.base64EncodedString()
+        }
+        
         let url = URL(string: "https://accounts.spotify.com/api/token")!
         let dispatch = DispatchGroup()
         
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.setValue("Basic \(authCode)", forHTTPHeaderField: "Authorization")
         request.httpMethod = "POST"
-        request.httpBody = grantTypeStr.data(using: .utf8)
+        
+        let body = ["grant_type": "client_credentials"]
+        request.httpBody = try? JSONSerialization.data(withJSONObject: body)
         
         dispatch.enter()
         URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data {
+            if let error = error {
+                print("Error: \(error)")
+            } else if let data = data {
                 if let tokenResponse = try? JSONDecoder().decode(TokenResponse.self, from: data) {
-                    accessToken = tokenResponse.access_token
-                    accessTokenType = tokenResponse.token_type
+                    self.accessToken = tokenResponse.access_token
+                    self.accessTokenType = tokenResponse.token_type
+                } else {
+                    print("Error decoding JSON")
                 }
+            } else {
+                print("No data received")
             }
             dispatch.leave()
         }.resume()
         
         dispatch.wait()
-    }
-    
-    func getCurrentSong() {
-        if accessToken != "" {
-            let authorizaztionHeader = "Authorization: \(accessTokenType) \(accessToken)"
-            let url = URL(string: "https://api.spotify.com/v1/me/player/currently-playing")
-        }
-        //https://api.spotify.com/v1/me/player/currently-playing
     }
     
     func getNextSongInQueue() {}
@@ -66,25 +74,22 @@ struct CurrentlyPlayingResponse: Decodable {
     
 }
 
-struct TrackObject: Decodable{
+struct TrackObject: Codable {
     let name: String
     let artists: [ArtistObject]
+    let album: Album
 
-    struct ArtistObject: Decodable {
+    struct ArtistObject: Codable {
         let name: String
     }
     
-    struct Album: Decodable {
-        let externalUrls: [ExternalUrl]
+    struct Album: Codable {
+        let images: [Image]
         
-        struct ExternalUrl: Decodable {
-            let images: [Image]
-            
-            struct Image: Decodable {
-                let url: String
-                let width: Int
-                let height: Int
-            }
+        struct Image: Codable {
+            let url: String
+            let width: Int
+            let height: Int
         }
     }
 }

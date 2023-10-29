@@ -22,7 +22,7 @@ struct SongInfoImageOverlay: View {
         .padding(.leading, 6)
     }
     
-    func updateSongTitle(artist: String, songTitle: String) {
+    public func updateSongTitle(artist: String, songTitle: String) {
         artistAndSongText = "\(artist) - \(songTitle)"
     }
 }
