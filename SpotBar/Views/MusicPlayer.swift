@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MusicPlayer: View {
     @State private var progress = 0.0
-    let requestHandler = RequestHandler()
+    let requestHandler = RequestManager()
     func playMusic() {
         requestHandler.fetchAccessToken(clientId: "", clientSecret: "")
     }

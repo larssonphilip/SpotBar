@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D27A18122B07A33B00027EEE /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27A18112B07A33B00027EEE /* AuthManager.swift */; };
+		D27A18162B07A6E600027EEE /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27A18152B07A6E600027EEE /* Secrets.swift */; };
 		D281C7C22AD879FA009ED17B /* SpotBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D281C7C12AD879FA009ED17B /* SpotBarApp.swift */; };
 		D281C7C42AD879FA009ED17B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D281C7C32AD879FA009ED17B /* ContentView.swift */; };
 		D281C7C62AD879FB009ED17B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D281C7C52AD879FB009ED17B /* Assets.xcassets */; };
@@ -15,11 +16,12 @@
 		D281C7D12AD87A69009ED17B /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D281C7D02AD87A69009ED17B /* MusicPlayer.swift */; };
 		D281C7D32AD87A76009ED17B /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D281C7D22AD87A76009ED17B /* AppMenu.swift */; };
 		D281C7D52AD87A8E009ED17B /* SongInfoImageOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D281C7D42AD87A8E009ED17B /* SongInfoImageOverlay.swift */; };
-		D2A1FDC12AE9AD4B007B5691 /* RequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1FDC02AE9AD4B007B5691 /* RequestHandler.swift */; };
+		D2A1FDC12AE9AD4B007B5691 /* RequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A1FDC02AE9AD4B007B5691 /* RequestManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D27A18112B07A33B00027EEE /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		D27A18152B07A6E600027EEE /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		D281C7BE2AD879FA009ED17B /* SpotBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D281C7C12AD879FA009ED17B /* SpotBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotBarApp.swift; sourceTree = "<group>"; };
 		D281C7C32AD879FA009ED17B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,7 +31,7 @@
 		D281C7D02AD87A69009ED17B /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
 		D281C7D22AD87A76009ED17B /* AppMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenu.swift; sourceTree = "<group>"; };
 		D281C7D42AD87A8E009ED17B /* SongInfoImageOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongInfoImageOverlay.swift; sourceTree = "<group>"; };
-		D2A1FDC02AE9AD4B007B5691 /* RequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestHandler.swift; sourceTree = "<group>"; };
+		D2A1FDC02AE9AD4B007B5691 /* RequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +45,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D27A18172B07A7BF00027EEE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D2A1FDC02AE9AD4B007B5691 /* RequestManager.swift */,
+				D27A18112B07A33B00027EEE /* AuthManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D27A18182B07A80100027EEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D281C7D22AD87A76009ED17B /* AppMenu.swift */,
+				D281C7D02AD87A69009ED17B /* MusicPlayer.swift */,
+				D281C7C12AD879FA009ED17B /* SpotBarApp.swift */,
+				D281C7C32AD879FA009ED17B /* ContentView.swift */,
+				D281C7D42AD87A8E009ED17B /* SongInfoImageOverlay.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D281C7B52AD879FA009ED17B = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +85,12 @@
 		D281C7C02AD879FA009ED17B /* SpotBar */ = {
 			isa = PBXGroup;
 			children = (
-				D281C7D22AD87A76009ED17B /* AppMenu.swift */,
-				D281C7D02AD87A69009ED17B /* MusicPlayer.swift */,
-				D281C7C12AD879FA009ED17B /* SpotBarApp.swift */,
-				D281C7C32AD879FA009ED17B /* ContentView.swift */,
+				D27A18182B07A80100027EEE /* Views */,
 				D281C7C52AD879FB009ED17B /* Assets.xcassets */,
 				D281C7CA2AD879FB009ED17B /* SpotBar.entitlements */,
 				D281C7C72AD879FB009ED17B /* Preview Content */,
-				D281C7D42AD87A8E009ED17B /* SongInfoImageOverlay.swift */,
-				D2A1FDC02AE9AD4B007B5691 /* RequestHandler.swift */,
-				D27A18112B07A33B00027EEE /* AuthManager.swift */,
+				D27A18172B07A7BF00027EEE /* Managers */,
+				D27A18152B07A6E600027EEE /* Secrets.swift */,
 			);
 			path = SpotBar;
 			sourceTree = "<group>";
@@ -155,9 +174,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D281C7C42AD879FA009ED17B /* ContentView.swift in Sources */,
+				D27A18162B07A6E600027EEE /* Secrets.swift in Sources */,
 				D27A18122B07A33B00027EEE /* AuthManager.swift in Sources */,
 				D281C7D52AD87A8E009ED17B /* SongInfoImageOverlay.swift in Sources */,
-				D2A1FDC12AE9AD4B007B5691 /* RequestHandler.swift in Sources */,
+				D2A1FDC12AE9AD4B007B5691 /* RequestManager.swift in Sources */,
 				D281C7C22AD879FA009ED17B /* SpotBarApp.swift in Sources */,
 				D281C7D32AD87A76009ED17B /* AppMenu.swift in Sources */,
 				D281C7D12AD87A69009ED17B /* MusicPlayer.swift in Sources */,

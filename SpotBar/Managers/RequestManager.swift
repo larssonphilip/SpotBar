@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RequestHandler {
+struct RequestManager {
     @State private var accessToken: String = ""
     @State private var accessTokenType: String = ""
     @State var currentlyPlaying: String? = nil
