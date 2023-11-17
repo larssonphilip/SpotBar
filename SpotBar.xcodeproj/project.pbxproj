@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D252FAE82B07B067007E3DFC /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D252FAE72B07B067007E3DFC /* WebView.swift */; };
+		D252FAEA2B07B353007E3DFC /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D252FAE92B07B353007E3DFC /* AuthView.swift */; };
 		D27A18122B07A33B00027EEE /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27A18112B07A33B00027EEE /* AuthManager.swift */; };
 		D27A18162B07A6E600027EEE /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27A18152B07A6E600027EEE /* Secrets.swift */; };
 		D281C7C22AD879FA009ED17B /* SpotBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D281C7C12AD879FA009ED17B /* SpotBarApp.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D252FAE72B07B067007E3DFC /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		D252FAE92B07B353007E3DFC /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		D27A18112B07A33B00027EEE /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		D27A18152B07A6E600027EEE /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		D281C7BE2AD879FA009ED17B /* SpotBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +66,8 @@
 				D281C7C12AD879FA009ED17B /* SpotBarApp.swift */,
 				D281C7C32AD879FA009ED17B /* ContentView.swift */,
 				D281C7D42AD87A8E009ED17B /* SongInfoImageOverlay.swift */,
+				D252FAE72B07B067007E3DFC /* WebView.swift */,
+				D252FAE92B07B353007E3DFC /* AuthView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +185,8 @@
 				D281C7D52AD87A8E009ED17B /* SongInfoImageOverlay.swift in Sources */,
 				D2A1FDC12AE9AD4B007B5691 /* RequestManager.swift in Sources */,
 				D281C7C22AD879FA009ED17B /* SpotBarApp.swift in Sources */,
+				D252FAEA2B07B353007E3DFC /* AuthView.swift in Sources */,
+				D252FAE82B07B067007E3DFC /* WebView.swift in Sources */,
 				D281C7D32AD87A76009ED17B /* AppMenu.swift in Sources */,
 				D281C7D12AD87A69009ED17B /* MusicPlayer.swift in Sources */,
 			);

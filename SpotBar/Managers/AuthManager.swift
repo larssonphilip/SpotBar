@@ -5,9 +5,9 @@
 //  Created by Philip Larsson on 2023-11-17.
 //
 
-import Foundation
+import SwiftUI
 
-final class AuthManager {
+struct AuthManager {
     static let shared = AuthManager()
     
     private init() {}
