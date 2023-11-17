@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D27A18122B07A33B00027EEE /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27A18112B07A33B00027EEE /* AuthManager.swift */; };
-		D27A18142B07A4B300027EEE /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27A18132B07A4B300027EEE /* Secrets.swift */; };
 		D281C7C22AD879FA009ED17B /* SpotBarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D281C7C12AD879FA009ED17B /* SpotBarApp.swift */; };
 		D281C7C42AD879FA009ED17B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D281C7C32AD879FA009ED17B /* ContentView.swift */; };
 		D281C7C62AD879FB009ED17B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D281C7C52AD879FB009ED17B /* Assets.xcassets */; };
@@ -21,7 +20,6 @@
 
 /* Begin PBXFileReference section */
 		D27A18112B07A33B00027EEE /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
-		D27A18132B07A4B300027EEE /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		D281C7BE2AD879FA009ED17B /* SpotBar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpotBar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D281C7C12AD879FA009ED17B /* SpotBarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotBarApp.swift; sourceTree = "<group>"; };
 		D281C7C32AD879FA009ED17B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 				D281C7D42AD87A8E009ED17B /* SongInfoImageOverlay.swift */,
 				D2A1FDC02AE9AD4B007B5691 /* RequestHandler.swift */,
 				D27A18112B07A33B00027EEE /* AuthManager.swift */,
-				D27A18132B07A4B300027EEE /* Secrets.swift */,
 			);
 			path = SpotBar;
 			sourceTree = "<group>";
@@ -158,7 +155,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D281C7C42AD879FA009ED17B /* ContentView.swift in Sources */,
-				D27A18142B07A4B300027EEE /* Secrets.swift in Sources */,
 				D27A18122B07A33B00027EEE /* AuthManager.swift in Sources */,
 				D281C7D52AD87A8E009ED17B /* SongInfoImageOverlay.swift in Sources */,
 				D2A1FDC12AE9AD4B007B5691 /* RequestHandler.swift in Sources */,
