@@ -25,6 +25,7 @@ struct WebView: NSViewRepresentable {
     }
 
     func updateNSView(_ nsView: WKWebView, context: Context) {
+        nsView.navigationDelegate = context.coordinator
         if let url = URL(string: url) {
             let request = URLRequest(url: url)
             nsView.load(request)

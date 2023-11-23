@@ -11,8 +11,8 @@ import SwiftUI
 struct SpotBarApp: App {
     var body: some Scene {
         MenuBarExtra("SpotBar", systemImage: "music.note") {
-            AuthView()
-            //AppMenu()
+            //AuthView()
+            AppMenu()
         }.menuBarExtraStyle(.window)
         WindowGroup {
             ContentView()

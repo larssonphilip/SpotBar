@@ -9,8 +9,7 @@ import SwiftUI
 import WebKit
 
 struct AuthView: View {
-    
     var body: some View {
-        WebView(url: "https://www.example.com")
+        WebView(url: "https://www.google.com").frame(maxHeight:500.0)
     }
 }
