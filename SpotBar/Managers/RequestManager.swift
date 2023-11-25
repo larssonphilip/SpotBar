@@ -37,7 +37,7 @@ struct RequestManager {
             if let error = error {
                 print("Error: \(error)")
             } else if let data = data {
-                if let tokenResponse = try? JSONDecoder().decode(TokenResponse.self, from: data) {
+                if let tokenResponse = try? JSONDecoder().decode(Token.self, from: data) {
                     self.accessToken = tokenResponse.access_token
                     self.accessTokenType = tokenResponse.token_type
                 } else {
@@ -61,36 +61,3 @@ struct RequestManager {
     func nextSong() {}
     
 }
-
-struct TokenResponse: Codable {
-    let access_token: String
-    let token_type: String
-    let expires_in: Int
-}
-
-struct CurrentlyPlayingResponse: Decodable {
-    let currentProgressInMs: Int
-    let isPlaying: Bool
-    
-}
-
-struct TrackObject: Codable {
-    let name: String
-    let artists: [ArtistObject]
-    let album: Album
-
-    struct ArtistObject: Codable {
-        let name: String
-    }
-    
-    struct Album: Codable {
-        let images: [Image]
-        
-        struct Image: Codable {
-            let url: String
-            let width: Int
-            let height: Int
-        }
-    }
-}
-

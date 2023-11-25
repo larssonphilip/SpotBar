@@ -12,10 +12,7 @@ struct SpotBarApp: App {
     var body: some Scene {
         MenuBarExtra("SpotBar", systemImage: "music.note") {
             //AuthView()
-            AppMenu()
+            LoginView()
         }.menuBarExtraStyle(.window)
-        WindowGroup {
-            ContentView()
-        }
     }
 }

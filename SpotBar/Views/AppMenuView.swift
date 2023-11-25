@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct AppMenu: View {
+struct AppMenuView: View {
     var body: some View {
         VStack {
             if !AuthManager.shared.isUserSignedIn {
                 NavigationView {
                     HStack {
                         Spacer()
-                        NavigationLink(destination: AuthView()) {
+                        NavigationLink(destination: LoginView()) {
                             Text("Sign in with Spotify")
                         }.frame(minWidth:285.0, minHeight: 75.0)
                         Spacer()
@@ -25,10 +25,10 @@ struct AppMenu: View {
                     Image("CoverPlaceholder")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .overlay(SongInfoImageOverlay(), alignment: .bottomLeading)
+                        .overlay(SongInfoImageOverlayView(), alignment: .bottomLeading)
                         .padding(0)
                     
-                    MusicPlayer()
+                    MusicPlayerView()
                 }
             }
         }.frame(maxHeight: 500.0)

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SongInfoImageOverlay: View {
+struct SongInfoImageOverlayView: View {
     @State private var artistAndSongText: String = "Placeholder Artist - Placeholder Song Title"
     var body: some View {
         ZStack {

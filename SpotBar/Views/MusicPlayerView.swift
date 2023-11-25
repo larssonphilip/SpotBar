@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MusicPlayer: View {
+struct MusicPlayerView: View {
     @State private var progress = 0.0
     let requestHandler = RequestManager()
     let secrets = Secrets()
@@ -67,7 +67,11 @@ struct MusicPlayer: View {
             
         }.onAppear()
             .background(Color(red: 18/255, green: 18/255, blue: 18/255))
-            
+    }
+}
 
+struct MusicPlayerView_Previews : PreviewProvider {
+    static var previews: some View {
+        MusicPlayerView()
     }
 }
